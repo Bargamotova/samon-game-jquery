@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-red: rgb(212, 34, 34);
+  --clr-green: rgb(7, 148, 0);
+  --clr-blue: rgb(44, 44, 207);
+  --clr-yellow: rgb(206, 206, 29);
+  --clr-electro: #20ff00;
+  --clr-black: #16181b;
+  --clr-primary: #011f3f;
+  --clr-shadow: 0 0 10px hsla(0, 0%, 100%, 0.5),
+    0 0 20px hsla(0, 0%, 100%, 0.4),
+    0 0 30px hsla(0, 0%, 100%, 0.3);
+  ;
+  --shadow-text: 0 0 1px #22ff0094,
+    0 0 5px hsla(102, 100%, 72%, 0.5);
+  ;
+}
+
+body {
+  text-align: center;
+  background-color: var(--clr-primary);
+}
+
+.header {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15%;
+  padding: 5% 0;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive, monospace;
+  font-size: 3rem;
+  margin: 0 auto;
+  color: var(--clr-electro);
+  text-shadow: var(--shadow-text);
+  line-height: 1.2;
+  text-wrap: balance;
+  max-width: 1200px;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.btn {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid var(--clr-black);
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: coral;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: var(--clr-red);
+}
+
+.green {
+  background-color: var(--clr-green);
+}
+
+.blue {
+  background-color: var(--clr-blue);
+}
+
+.yellow {
+  background-color: var(--clr-yellow);
+}
+
+.btn:hover {
+  box-shadow: var(--clr-shadow)
+}
+
+.clicked {
+  box-shadow: var(--clr-shadow);
+  background-color: var(--clr-electro);
+}
